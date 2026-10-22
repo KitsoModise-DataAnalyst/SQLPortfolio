@@ -61,7 +61,6 @@ Business questions include:
 - Identifying potential data quality issues
 - Ranking products using `LIMIT`
 - Analysing monthly sales trends using date functions
-- Using Common Table Expressions (CTEs) and window functions such as `LAG()`
 
 ## Revenue Calculation
 
