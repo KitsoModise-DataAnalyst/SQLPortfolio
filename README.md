@@ -56,6 +56,7 @@ Business questions include:
 - Aggregating data with `COUNT()`, `SUM()`, and `AVG()`
 - Joining related tables using `JOIN`
 - Grouping and sorting results with `GROUP BY` and `ORDER BY`
+- Conditional logic using 'CASE WHEN'
 - Calculating revenue after discounts
 - Calculating percentages and average order value
 - Identifying potential data quality issues
