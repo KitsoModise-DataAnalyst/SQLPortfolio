@@ -59,7 +59,6 @@ Business questions include:
 - Calculating revenue after discounts
 - Calculating percentages and average order value
 - Identifying potential data quality issues
-- Ranking products using `LIMIT`
 - Analysing monthly sales trends using date functions
 
 ## Revenue Calculation
