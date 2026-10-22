@@ -4,54 +4,64 @@
 
 This project analyses e-commerce sales data using SQL to answer business questions about sales performance, revenue, product performance, order status, and monthly sales trends.
 
-The goal is to demonstrate practical SQL skills by transforming raw sales data into useful insights that can support business decision-making.
+The goal is to demonstrate practical SQL skills by transforming sales data into useful insights that can support business decision-making.
 
 ## Dataset
 
 - **Source:** [E-Commerce Sales Data Analysis and EDA — Kaggle](https://www.kaggle.com/datasets/erfan4524/e-commerce-sales-data-analysis-and-eda)
 - **Domain:** E-commerce and retail analytics
-- **Tools:** SQL and GitHub
+- **Tools:** SQL, MySQL, and GitHub
 
-The analysis uses order, product, and payment information to investigate sales performance. Revenue calculations account for product quantities and discounts, while relevant analyses focus on completed orders with paid payments.
+The analysis uses order, product, and payment information to investigate sales performance. Where applicable, the analysis focuses on completed orders with paid payments.
 
-## Business Questions
+## SQL Analysis
 
-### Level 1 — Basic Sales Analysis and Data Quality
+The project is organised into two levels, progressing from foundational sales analysis to product performance and sales trends.
 
-This level focuses on understanding the dataset and establishing baseline sales metrics.
+### Level 1 — Basic Analysis and Data Quality
 
-1. How many orders are in the dataset?
+This level focuses on understanding the dataset, calculating core sales metrics, and identifying potential data quality issues.
+
+Business questions include:
+
+1. What is the total number of orders?
 2. What is the total quantity of products sold?
 3. What is the total revenue generated?
 4. What is the average order value (AOV)?
 5. What percentage of orders fall into each order status?
-6. Are there any data quality issues, such as missing values, duplicate records, or invalid quantities and prices?
+6. Are there data quality issues, such as missing values, duplicate records, or invalid quantities and prices?
+
+**[View Level 1 SQL Queries](sql/level-1-basic-analysis.sql)**
 
 ### Level 2 — Product Performance and Sales Trends
 
-This level explores which products and categories contribute most to sales and how sales change over time.
+This level explores product and category performance, revenue contribution, and changes in sales over time.
+
+Business questions include:
 
 1. Which product category generates the highest revenue?
-2. Which product category sells the highest number of units?
+2. Which category sells the highest number of units?
 3. What are the top 10 products by revenue?
 4. Which products have high sales volumes but relatively low revenue per unit?
 5. Which products have the highest average selling prices after discounts?
-6. Which months have the highest and lowest sales?
+6. Which months have the highest and lowest revenue?
 7. How does revenue change from month to month?
-8. What percentage of total revenue does each product category contribute?
+8. What percentage of total revenue does each category contribute?
+
+**[View Level 2 SQL Queries](sql/level-2-product-performance.sql)**
 
 ## SQL Skills Demonstrated
 
-- `SELECT`, `WHERE`, `GROUP BY`, and `ORDER BY`
-- Aggregate functions such as `COUNT()`, `SUM()`, and `AVG()`
+- Filtering data with `WHERE`
+- Aggregating data with `COUNT()`, `SUM()`, and `AVG()`
 - Joining related tables using `JOIN`
+- Grouping and sorting results with `GROUP BY` and `ORDER BY`
 - Calculating revenue after discounts
-- Using `ROUND()` for readable financial metrics
 - Calculating percentages and average order value
 - Identifying potential data quality issues
-- Ranking products using sorting and `LIMIT`
-- Analysing monthly trends using date functions
-- Using Common Table Expressions (CTEs) and window functions, including `LAG()`
+- Ranking products using `LIMIT`
+- Analysing monthly sales trends using date functions
+- Using Common Table Expressions (CTEs) and window functions such as `LAG()`
 
 ## Revenue Calculation
 
@@ -61,40 +71,45 @@ Revenue is calculated using product quantity, unit price, and discount:
 
 This calculation assumes discounts are stored as decimal values. For example, a discount of `0.10` represents 10%.
 
-Where applicable, the analysis filters for completed orders and paid payments to focus on realised sales. Care is also needed to ensure joins do not duplicate order line items or inflate revenue.
+Where applicable, completed orders and paid payments are used to focus the analysis on realised sales. Joins are also considered carefully to avoid duplicating order line items and overstating revenue.
+
+## Key Findings
+
+*This section will be updated after the SQL queries have been validated and the results reviewed.*
+
+The final findings will highlight:
+
+- The strongest-performing product categories
+- The leading products by revenue
+- Monthly sales patterns and revenue changes
+- Potential data quality issues
+- Business opportunities identified through the analysis
 
 ## Repository Structure
 
 ```text
-ecommerce-sales-analysis/
+SQLPortfolio/
 ├── README.md
 └── sql/
     ├── level-1-basic-analysis.sql
     └── level-2-product-performance.sql
 ```
 
-The SQL files contain the queries used to answer the business questions in each level.
-
-## Key Findings
-
-*This section will be updated after the queries have been executed and the results reviewed.*
-
-Findings will highlight the strongest-performing product categories, leading products by revenue, sales trends, and any data quality issues that could affect the analysis.
-
 ## Project Status
 
-- [x] Defined business questions for Level 1 and Level 2
+- [x] Defined Level 1 and Level 2 business questions
 - [x] Developed SQL queries for the analysis
-- [ ] Validate query results and calculations
-- [ ] Document key findings and business recommendations
-- [ ] Extend the project to profitability and discount analysis
+- [x] Uploaded SQL files to GitHub
+- [ ] Validate queries and calculations
+- [ ] Document verified findings and business recommendations
+- [ ] Extend the analysis to profitability and discount performance
 
 ## Future Improvements
 
 - Analyse profit margins when reliable product cost data is available.
 - Investigate the relationship between discounts and sales performance.
 - Create visualisations to communicate key findings.
-- Develop recommendations based on the completed analysis.
+- Develop business recommendations based on validated results.
 
 ## Author
 
